@@ -1,0 +1,72 @@
+//last insertion
+import java.util.Scanner;
+public class train {
+    public static void main(String[]args){
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        int[]arr=new int[n+1];
+        for(int i=0;i<n;i++){
+            arr[i]=s.nextInt();
+        }
+        int element=s.nextInt();
+        arr[n]=element;
+        n++;
+        for(int i=0;i<n;i++){
+            System.out.println(arr[i]);
+        }
+        
+    }
+}
+//first insertion
+import java.util.Scanner;
+public class begin {
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        int i;
+        int count = 0;
+        int[]arr = new int[n];
+        for(i=0;i<n;i++){
+            arr[i]=s.nextInt();
+        }
+        int[] newarr = new int[n+1];
+       int ele=s.nextInt();
+       newarr[0]=ele; 
+       
+
+        for (i=0;i<n;i++){
+         newarr[i+1]=arr[i];
+        }
+       for(int var:newarr){
+        count++;
+       }
+       for(i=0;i<count;i++){
+        System.out.print(newarr[i]);
+       }
+           
+       }}
+//specific
+import java.util.Scanner;
+public class specific {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int[] arr = {1, 2, 3, 4, 5};
+        int newEle = s.nextInt();
+        int pos= s.nextInt();
+        if (pos< 0 || pos> arr.length) {
+            System.out.println(" " + arr.length);
+            return;
+        }
+        int[] newArr = new int[arr.length + 1];
+        for (int i = 0; i < pos; i++) {
+            newArr[i] = arr[i];
+        }
+        newArr[pos] = newEle;
+        for (int i = pos; i < arr.length; i++) {
+            newArr[i + 1] = arr[i];
+        }
+        for (int i = 0; i < newArr.length; i++) {
+            System.out.print(newArr[i] + " ");
+        }
+    }
+}
